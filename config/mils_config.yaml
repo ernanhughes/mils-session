@@ -1,0 +1,37 @@
+# config/mils_config.yaml
+# Configuration file for Cross-Modal Cognitive Mapping System
+
+# Database connection settings
+database:
+  host: localhost
+  name: cognitive_memory
+  user: postgres
+  password: password
+
+# Embedding generation settings
+embedding:
+  provider: openai         # or 'local' if using Ollama/Qwen2.5 later
+  model_name: text-embedding-ada-002
+
+# Resonance graph settings
+resonance_graph:
+  similarity_threshold: 0.75
+  layout_algorithm: spring  # could be 'spring', 'kamada_kawai', etc.
+
+# Search settings
+semantic_search:
+  top_k: 5
+
+# Future settings placeholders
+text_to_image:
+  provider: none            # future: 'automatic1111' or 'ollama' or 'stabilityai'
+  model: none
+
+visual_diary:
+  generate_nightly: false   # future automation setting
+
+# Logging settings
+logging:
+  level: INFO
+  log_to_file: true
+  file_path: logs/mils_system.log
